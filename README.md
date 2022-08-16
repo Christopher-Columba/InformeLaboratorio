@@ -1,116 +1,162 @@
 # InformeLaboratorio
 
 1. OBJETIVOS
+
 1.1.	Objetivo general
-Entender los elementos y conceptos básicos acerca de los circuitos en serie-paralelo, junto a conceptos de puente de Wheatstone, varios teoremas de circuitos para simplificar los mismos y conversiones, para adquirir recursos necesarios para la resolución de este tipo de circuitos.
+
+Entender, comprender y resolver los siguientes ejercicios de laboratorio, mediante el uso de los teoremas de superposición, transferencia máxima y del Teorema de Thevenin.
 
 1.2.	Objetivos especificos
-•	Identificar y comprender los circuitos en serie-paralelo 
 
-•	Analizar divisores de voltaje con carga 
+• Aplicar el teorema de superposición al análisis de circuitos
 
-•	Determinar el efecto de carga de un voltímetro en un circuito 
+• Aplicar el teorema de Thevenin para simplificar un circuito para su análisis
 
-•	Analizar redes en escalera 
+• Aplicar el teorema de Norton para simplificar un circuito
 
-•	Analizar un puente de Wheatstone 
-
-•	Describir las características de una fuente de voltaje de cd y de una fuente de corriente 
-
-•	Realizar conversiones de fuente 
-
-•	Aplicar los teoremas de superposición al análisis de circuitos, de Thevenin y de Norton para simplificar un circuito
-
-•	Aplicar el teorema de transferencia de potencia máxima 
-
-•	Realizar conversiones Δ a Y y Y a Δ
+• Aplicar el teorema de transferencia de potencia máxima
 
 2. MARCO TEÓRICO (RESUMEN)
 
-2.1	CIRCUITOS EN SERIE-PARALELO
-Se determina a un circuito en serie-paralelo es una combinación de trayectorias tanto en serie como en paralelo. Para determinar la resistencia total en un circuito en serie-paralelo, defina las relaciones en serie y en paralelo, luego aplique las fórmulas de resistencia en serie y resistencia en paralelo.
-Para encontrar la corriente total, aplique la ley de Ohm y divida el voltaje total por la resistencia total. Para determinar la corriente de derivación, aplique la fórmula de división de corriente, la ley de Kirchhoff o la ley de Ohm. Considere cada problema de circuito individualmente para encontrar el método más apropiado. Para determinar la caída de voltaje entre cualquier parte de un circuito en serie a paralelo, use la fórmula del divisor de voltaje, la ley de voltaje de Kirchhoff o la ley de Ohm. Considere cada problema de circuito individualmente para encontrar el método más apropiado. Cuando la resistencia de carga está conectada a la salida del divisor de voltaje, el voltaje de salida disminuirá.
-Para minimizar el impacto de la carga, la resistencia de la carga debe ser grande en relación con la resistencia conectada a ella. Para determinar la impedancia total de la red en escalera, comience en el punto más alejado de la fuente y reduzca la resistencia en etapas.
+2.1	TEOREMA DE SUPERPOSICIÓN
 
-Puente Wheatstone 
+Es un método útil para el análisis de circuitos que tienen más de una fuente.
 
-Este circuito de puente de 4 pines puede medir con precisión la resistencia desconocida utilizando una balanza. El sesgo de resistencia se puede medir en condiciones desequilibradas. Los puentes de Wheatstone equilibrados se pueden utilizar para medir la resistencia desconocida. El puente está balanceado cuando el voltaje de salida es cero. La condición de equilibrio produce corriente cero a través de la carga conectada entre los terminales de salida del puente. Los puentes de Wheatstone no balanceados se pueden usar para medir cantidades físicas usando sondas.
-Abierto y corto son defectos típicos en los circuitos eléctricos. Al fundirse, las resistencias se abren normalmente. 
+Pasos para aplicar el método de superposición:
 
-![Screenshot 2022-06-30 233716](https://user-images.githubusercontent.com/104941068/176824324-35e1068e-4c5e-44d8-be16-aefd7846af79.png)
+Paso 1. Dejar una fuente de voltaje (o de corriente) a la vez en el circuito y reemplazar cada
+una de las demás fuentes de voltaje (o de corriente) con su resistencia interna. Para
+fuentes ideales, un corto representa resistencia interna de cero y una abertura representa resistencia interna infinita.
 
-Corriente remanente
+Paso 2. Determinar la corriente (o el voltaje) particular que se desea justo como si hubiera
+sólo una fuente en el circuito.
 
-Es la corriente residual después de restar la corriente de carga total de la corriente total en el circuito. 
+Paso 3. Tomar la siguiente fuente que haya en el circuito y repetir los pasos 1 y 2. Hacer esto con cada una de las fuentes.
 
-Puente desequilibrado 
+Paso 4. Sumar algebraicamente las corrientes producidas por cada fuente individual para encontrar la corriente real en una rama dada. (Si las corrientes están en la misma dirección, se suman. Si están en direcciones opuestas, se restan y la dirección de la
+corriente resultante será la misma que la presentada por la cantidad más grande de las
+cantidades originales.) Una vez determinada la corriente, ya se puede calcular el voltaje mediante la ley de Ohm. 
 
-El circuito puente desequilibrado está representado por el voltaje a través de los terminales de salida en proporción a la desviación del equilibrio.
+2.2 TEOREMA DE THEVENIN
 
-Puente equilibrado 
+Es un método empleado para transformar un circuito lineal de dos terminales en un circuito equivalente con sólo una fuente de voltaje en serie con una sola resistencia. Además, el teorema permite reducir cualquier circuito resistivo lineal de dos terminales a una forma equivalente compuesta por una fuente de voltaje equivalente en serie con una resistencia equivalente. El circuito equivalente de Thevenin siempre aparece en la forma de una fuente de voltaje equivalente en serie con una resistencia equivalente haciendo caso omiso del circuito original que reemplaza. La importancia del teorema de Thevenin es que el circuito equivalente puede reemplazar al circuito original en cuanto a cualquier carga externa. Cualquier resistor de carga conectado entre las terminales de un circuito equivalente de Thevenin tendrá la misma corriente
+a través de él y el mismo voltaje entre sus extremos como si estuviera conectado a las terminales.
+del circuito original.
 
-El circuito en la configuración de puente tiene un equilibrio representado por 0 voltios entre las terminales de salida. 
+Pasos a seguir para aplicar el teorema de Thevenin:
 
-2.2 TEOREMAS DE CIRCUITOS Y CONVERSIONES
+Paso 1. Abrir las dos terminales (eliminar cualquier carga) entre las que se desea encontrar el
+circuito equivalente de Thevenin.
 
-Una fuente de voltaje ideal tiene cero resistencias internas. Proporciona un voltaje constante a través de los terminales independientemente de la resistencia de la carga. La fuente de voltaje real tiene una resistencia interna distinta de cero.
-Una fuente de corriente ideal tiene una resistencia interna infinita. Proporciona una corriente constante independientemente de la carga.
-La fuente de corriente real tiene una resistencia interna limitada. La teoría de la interferencia es muy útil para circuitos con múltiples fuentes.
+Paso 2. Determinar el voltaje (VTH) entre las dos terminales abiertas.
 
-Teorema de Thevenin 
+Paso 3. Determinar la resistencia (RTH) entre las dos terminales abiertas con todas las fuentes
+reemplazadas por sus resistencias internas (fuentes de voltaje ideales en cortocircuito
+y fuentes de corriente ideales abiertas).
 
-Es un método empleado para transformar un circuito lineal de dos terminales en un circuito equivalente con sólo una fuente de voltaje en serie con una sola resistencia.
-Además, permite reducir cualquier circuito de resistencia lineal de dos terminales a una forma equivalente que consiste en una fuente de voltaje equivalente conectada en serie con una resistencia equivalente. El término paridad, como se usa en los teoremas de Thevenin y Norton, significa que cuando una resistencia de carga dada se conecta al circuito equivalente, la resistencia tendrá el mismo voltaje y corriente a través de ella que cuando se conecta al circuito original.
+Paso 4. Conectar VTH y RTH en serie para producir el equivalente de Thevenin completo del
+circuito original.
 
-Teorema de Norton 
+Paso 5. Reemplazar la carga eliminada en el paso 1 entre las terminales del circuito equivalente de Thevenin. Ahora se pueden calcular la corriente y el voltaje que haya en la
+carga utilizando solamente la ley de Ohm. Tienen el mismo valor que la corriente y
+el voltaje presentes en la carga del circuito original.
 
-Método empleado para transformar un circuito lineal de dos terminales en un circuito equivalente con sólo una fuente de corriente en paralelo con una resistencia. Además, permite reducir cualquier circuito de resistencia lineal de dos terminales a una forma equivalente que consiste en una fuente de corriente equivalente en paralelo con la resistencia equivalente. La potencia máxima transferida a la carga desde la fuente cuando la resistencia de la carga es igual a la resistencia interna de la fuente.
+2.3 TEOREMA DE TRANSFERENCIA DE POTENCIA MÁXIMA
 
-Equivalencia terminal 
-
-Es el concepto de que, cuando cualquier resistencia de carga dada se conecta a dos fuentes, éstas producen el mismo voltaje de carga y la misma corriente de carga. 
-
-Teorema de superposición 
-
-Método útil para el análisis de circuitos que tienen más de una fuente. 
-
-Transferencia de potencia máxima 
-
-Para un voltaje de fuente dado, una transferencia de potencia máxima desde una fuente hasta una carga ocurre cuando la resistencia de la carga es igual a la resistencia interna de la fuente.
-
-Conversiones Δ a Y 
-
-![Screenshot 2022-06-30 233925](https://user-images.githubusercontent.com/104941068/176824509-356bf74c-0533-4d6b-b31a-25458ffd844b.png)
-
-Conversiones Y a Δ 
-
-![Screenshot 2022-06-30 233943](https://user-images.githubusercontent.com/104941068/176824563-c42a0635-e3cc-430f-a849-037159861e77.png)
+La transferencia de potencia máxima desde una fuente hasta una carga  ocurre cuando la resistencia de la carga es igual a la resistencia interna de la fuente. Hay que tener en cuenta que, el teorema de transferencia de potencia máxima es importante cuando se tiene que conocer el valor de la carga con la cual la fuente suministra la máxima potencia. Además, cuando se transfiere potencia máxima a una carga desde una fuente cuando la resistencia de la carga es igual a la resistencia interna de la fuente.
 
 3. EXPLICACIÓN Y RESOLUCIÓN DE EJERCICIOS O PROBLEMAS
 
-![1](https://user-images.githubusercontent.com/104941068/176825461-1445959f-eaf8-424c-9af5-72dc3f724869.png)
-![2](https://user-images.githubusercontent.com/104941068/176825465-9e0a0f3f-6200-4162-b3fd-b559378d9377.png)
-![3](https://user-images.githubusercontent.com/104941068/176825473-35e56f26-a0de-42c7-9bc0-75ef9351d70d.png)
-![4](https://user-images.githubusercontent.com/104941068/176825478-4728ac70-9a88-4229-ae87-4eb7c814dfed.png)
-![5](https://user-images.githubusercontent.com/104941068/176825929-993b1cb7-bc5d-4981-b473-ac09e3c3af2e.png)
-![6](https://user-images.githubusercontent.com/104941068/176825938-48237d42-589c-48ae-b4f4-2345e0920408.png)
-![7](https://user-images.githubusercontent.com/104941068/176825941-60557541-be7e-42c6-baec-c98ed2584565.png)
-![8](https://user-images.githubusercontent.com/104941068/176825943-06596fdb-4f84-4feb-9b7a-8125b4117ab7.png)
-![9](https://user-images.githubusercontent.com/104941068/176825945-9c297f15-396c-44ee-9610-a296caf70615.png)
+Ejercicio 1
 
-4. VIDEO
+![image](https://user-images.githubusercontent.com/104941068/184794322-63e5fcf2-eb88-42a0-b857-b23eba1355e8.png)
 
-https://youtu.be/1pGdxB9iisY
+Circuito realizado en un laboratorio virtual
 
-5. CONCLUSIONES
+![image](https://user-images.githubusercontent.com/104941068/184807334-e6ce6e46-80b5-48d3-a174-b5eccdc38969.png)
 
-•	Se logró entender conceptos elementales acerca de los circuitos serie-paralelo.
+![image](https://user-images.githubusercontent.com/104941068/184807866-9f20f567-a482-4ec5-bc1a-8ee1a0e6cea3.png)
 
-•	Se logró comprender la aplicación del puente de Wheatstone.
+Solución
 
-•	Se logró comprender varios teoremas como el de la superposición, teorema de Thevenin y teorema de Norton para simplificar y posteriormente resolver circuitos.
+![image](https://user-images.githubusercontent.com/104941068/184807594-1253f26e-cc7a-40af-b410-6413cbac416b.png)
 
-•	Se puede comprender la conversión de energía y la caída de voltaje.
+![image](https://user-images.githubusercontent.com/104941068/184810028-28c6470f-606a-43d2-b8c5-031fafecb60c.png)
+
+![image](https://user-images.githubusercontent.com/104941068/184810238-44d835b9-d85d-43fc-a445-bfb6cdd90ea2.png)
+
+Ejercicio 2
+
+![image](https://user-images.githubusercontent.com/104941068/184795996-5f258416-ba03-485d-8570-156a0bd11744.png)
+
+Circuito realizado en un laboratorio virtual
+
+![image](https://user-images.githubusercontent.com/104941068/184808850-a308a97a-1172-49d1-bf81-c6305d96aa5f.png)
+
+![image](https://user-images.githubusercontent.com/104941068/184808941-86bb0976-993d-45d8-b3fb-dbbc9a390083.png)
+
+Solución aplicando el Teorema de Thevenin
+
+![image](https://user-images.githubusercontent.com/104941068/184809043-dc4eeee6-9b10-45d7-89f9-85a4ee4c6e7e.png)
+
+![image](https://user-images.githubusercontent.com/104941068/184809114-63d9c9a5-36ea-4e0f-82ce-2871ec2ef46f.png)
+
+Ejercicio 3
+
+![image](https://user-images.githubusercontent.com/104941068/184796013-f453f5c0-023f-4fe4-b0fb-326de78e3eb0.png)
+
+Circuito realizado en un laboratorio virtual
+
+![image](https://user-images.githubusercontent.com/104941068/184832016-da6ed5e7-14e4-4b68-85f7-319a58cbbfd3.png)
+
+Pasos previos a la solución
+
+![image](https://user-images.githubusercontent.com/104941068/184832405-c7363d58-f537-43f5-80b2-817fc025cde4.png)
+
+![image](https://user-images.githubusercontent.com/104941068/184832926-d65a75f6-50c9-49b6-b05a-7701d10281f7.png)
+
+Solución
+
+![image](https://user-images.githubusercontent.com/104941068/184833498-759ab9ee-f5b7-4eaa-a253-8872923594ee.png)
+
+![image](https://user-images.githubusercontent.com/104941068/184833550-7bcc6a50-60c8-482c-bf7a-c2cb5de75b9b.png)
+
+4. EXPLICACIÓN Y RESOLUCIÓN DE EJERCICIOS O PROBLEMAS
+
+Ejercicio 1
+
+VTH=8.32 V RTH=4.7KΩ
+
+P=IxV P=3.78x8.32
+
+P=31.44mW
+
+Ejercicio 2
+
+I=500-400
+
+I=100mA
+
+Ejercicio 3
+
+VTH=10 V RTH=5Ω
+
+I=909 mA
+
+5. VIDEO
+
+https://youtu.be/UfDs2G1iJy0
+
+6. CONCLUSIONES
+
+• Se logró aplicar el teorema de superposición al análisis de
+un circuito.
+
+• Se hizo uso del teorema de Thevenin para simplificar un
+circuito para su análisis.
+
+• Se utilizó el teorema de transferencia de potencia
+máxima para resolver un ejercicio.
 
 6. BIBLIOGRAFÍA:
 FLOYD, T. L. (2008). DISPOSITIVOS ELECTRONICOS (8a. ed.). MEXICO: PEARSON EDUCACION.
